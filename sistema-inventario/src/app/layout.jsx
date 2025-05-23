@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
       <body>
         <SidebarProvider>
           <AsaidMenu />
+          {children}
         </SidebarProvider>
-        {children}
       </body>
     </html>
   );

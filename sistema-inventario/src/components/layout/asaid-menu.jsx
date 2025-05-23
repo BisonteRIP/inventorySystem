@@ -1,4 +1,5 @@
-import { House, Package, Boxes, PackagePlus, ChartColumn } from "lucide-react"
+import Link from "next/link"
+import { House, Package, Boxes, PackagePlus, ChartColumn} from "lucide-react"
 import { Separator } from "@radix-ui/react-separator";
 import { 
     Sidebar, 
@@ -11,7 +12,7 @@ import {
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/dashboard",
     icon: House,
   },
   {
@@ -51,10 +52,10 @@ export function AsaidMenu() {
                     {items.map((item) => (
                         <SidebarMenu key={item.title}>
                             <SidebarMenuButton asChild>
-                                <a className="space-x-1 py-5" href={item.url}>
+                                <Link className="space-x-1 py-5" href={item.url}>
                                     <item.icon/>
                                     <span className="font-medium text-md ">{item.title}</span>
-                                </a>
+                                </Link>
                             </SidebarMenuButton>
                         </SidebarMenu>
                     ))}
